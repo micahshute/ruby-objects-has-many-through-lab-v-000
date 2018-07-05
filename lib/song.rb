@@ -12,8 +12,8 @@ class Song
     @artist = artist
     @name = name
     @genre = genre
+    genre.songs << self
     @@all << self
-    artist.add_song(self, genre)
   end
 
 end
