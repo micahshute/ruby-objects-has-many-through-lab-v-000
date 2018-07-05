@@ -30,7 +30,7 @@ class Artist
   end
 
   def genres
-    Genre.all.select{|genre| genre.artists << self}
+    Genre.all.select{|genre| genre.artists.indlude?(self)}
   end
 
 end
