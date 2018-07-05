@@ -21,7 +21,6 @@ class Artist
     song = Song.new(name, self, genre)
     genre.artists << self
     genre.songs << song
-    binding.pry
     song
   end
 
