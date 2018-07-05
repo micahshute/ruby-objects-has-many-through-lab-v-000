@@ -1,4 +1,5 @@
 require_relative "song"
+require 'pry'
 
 class Artist
 
@@ -17,11 +18,10 @@ class Artist
   end
 
   def new_song(name, genre)
-    song = Song.new(name)
-    song.genre = genre
-    song.artist = self
+    song = Song.new(name, self, genre)
     genre.artists << self
     genre.songs << song
+    binding.pry
     song
   end
 
