@@ -9,7 +9,7 @@ class Genre
   attr_accessor :name, :artists, :songs
 
   def initialize(name)
-    @artist = []
+    @artists = []
     @songs = []
     @name = name
   end
