@@ -12,7 +12,8 @@ class Song
     @artist = artist
     @name = name
     @genre = genre
-    genre.songs << self
+    genre.songs << self if !!genre
+    genre.artists << artist if !!genre && !!artist
     @@all << self
   end
 
