@@ -20,7 +20,7 @@ class Artist
     song.genre = genre
     song.artist = self
     genre.artists << self
-    genre.song << song
+    genre.songs << song
     song
   end
 
