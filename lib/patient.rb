@@ -13,6 +13,10 @@ class Patient
     @@all.push(self)
   end
 
+  def new_appointment(doctor, time)
+    Appointment.new(doctor, self, time)
+  end
+
   def appointments
     Appointment.all.select{|apt| apt.patient == self}
   end
