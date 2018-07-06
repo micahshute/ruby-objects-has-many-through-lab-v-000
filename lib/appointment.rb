@@ -14,4 +14,5 @@ class Appointment
     @time = time
     @@all << self
   end
+  
 end
