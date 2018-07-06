@@ -21,8 +21,8 @@ class Patient
     Appointment.all.select{|apt| apt.patient == self}
   end
 
-  def doctor
-    Doctor.all.find{|doc| doc.patients.include?(self)}
+  def doctors
+    Doctor.all.select{|doc| doc.patients.include?(self)}
   end
 
 end
