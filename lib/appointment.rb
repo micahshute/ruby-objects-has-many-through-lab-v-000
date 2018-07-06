@@ -12,5 +12,6 @@ class Appointment
     @doctor = doctor
     @patient = patient
     @time = time
+    @@all << self
   end
 end
